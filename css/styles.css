@@ -514,7 +514,7 @@ color: var(--selection-color);
 }
 
 .contact-us-block {
-margin-left: 70px;
+margin-left: auto;
 color: var(--color-white);
 }
 
@@ -606,10 +606,18 @@ align-items: center;
 justify-content: center;
 text-align: center;
 letter-spacing: 0.06em;
+border: none;
 
 color: var(--color-white);
 background-color: var(--selection-color);
 border-radius: 4px;
+transition: background-color var(--transition-func);
+}
+
+.footer-form-button:hover,
+.footer-form-button:focus,
+.footer-form-button:active {
+    background-color: var(--active-button);
 }
 
 .footer-form-icon {
@@ -701,9 +709,12 @@ letter-spacing: 0.01em;
 color: var(--color-grey);
 }
 
+.modal-field {
+    margin-bottom: 10px;
+}
+
 .input-cover {
 position: relative;
-margin-bottom: 28px;
 }
 
 .modal-icon {
@@ -753,13 +764,17 @@ width: 16px;
 height: 15px;
 /* margin-left: 5px; */
 margin-right: 8px;
-border: 1px solid var(--color-black);
+border: 2px solid var(--color-black);
 border-radius: 2px;
 display: flex;
 align-items: center;
 justify-content: center;
 border-color: var(--color-black);
 fill: transparent;
+}
+
+.check {
+    margin-left: 12px;
 }
 
 .modal-check {
@@ -798,6 +813,13 @@ border-radius: 4px;
 cursor: pointer;
 margin-left: auto;
 margin-right: auto;
+transition: background-color var(--transition-func);
+}
+
+.modal-button:hover,
+.modal-button:focus,
+.modal-button:active {
+    background-color: var(--active-button);
 }
 
 .backdrop.is-hidden .modal {
@@ -819,11 +841,17 @@ justify-content: center;
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
 background-color: var(--color-white);
+transition: fill var(--transition-func);
 }
 
 .modal-close-icon {
 width: 100%;
 height: 100%;
+}
+
+.modal-close-button:focus,
+.modal-close-button:hover {
+fill: var(--selection-color);
 }
 
 .is-hidden {
